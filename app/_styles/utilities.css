@@ -1,0 +1,44 @@
+:root {
+  --grey-900: #201f24;
+  --beige-100: #f8f4f0;
+}
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid var(--grey-900);
+    border-right-color: var(--beige-100);
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid var(--beige-100);
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+@theme {
+  --shadow-1: inset 0px -8px 0px 0px #cc8b13;
+  --shadow-2: inset 0px -8px 0px 0px #118c87;
+  --shadow-3: inset 0px -4px 0px 0px #10212a;
+  --shadow-4: inset 0px -8px 0px 0px #10212a;
+  --shadow-5: inset 0px -4px 0px 0px #cc8b13;
+  --shadow-secondary-1: inset 0px -4px 0px 0px #cc8b13;
+  --shadow-secondary-2: inset 0px -4px 0px 0px #6b8997;
+  --shadow-restart: inset 0px -4px 0px 0px #6b8997;
+  --shadow-error: inset 0px -4px 0px 0px #cc8b13;
+}

@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./colors.css";
+@import "./typography.css";
+@import "./utilities.css";
+@import "./responsiv.css";
