@@ -14,7 +14,7 @@ const classMap: Record<CardType, string> = {
     'relative flex justify-between max-h-13 gap-2 rounded-lg py-4 px-5 bg-beige-100',
 };
 
-const CardMini = ({ title, amount, color, type }: CardMiniType) => {
+const CardMiniOverView = ({ title, amount, color, type }: CardMiniType) => {
   const colorStyle = color.startsWith('#') ? color : color;
 
   return (
@@ -30,4 +30,4 @@ const CardMini = ({ title, amount, color, type }: CardMiniType) => {
   );
 };
 
-export default CardMini;
+export default CardMiniOverView;

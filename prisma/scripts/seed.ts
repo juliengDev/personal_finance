@@ -1,19 +1,19 @@
 // scripts/seed.ts
-import { PrismaClient } from "@prisma/client";
-import fs from "fs";
-import path from "path";
+import { PrismaClient } from '@prisma/client';
+import fs from 'fs';
+import path from 'path';
 
 const prisma = new PrismaClient();
 
 async function main() {
   try {
     // Chemin vers votre fichier JSON
-    const dataPath = path.join(process.cwd(), "./app/_data/data.json");
+    const dataPath = path.join(process.cwd(), './data/data.json');
 
     // Lire le fichier JSON
-    const jsonData = JSON.parse(fs.readFileSync(dataPath, "utf8"));
+    const jsonData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 
-    console.log("Chargement des données:", jsonData);
+    console.log('Chargement des données:', jsonData);
 
     // Créer un utilisateur par défaut si nécessaire
     let defaultUser = null;
@@ -21,12 +21,12 @@ async function main() {
     if (!jsonData.users || jsonData.users.length === 0) {
       defaultUser = await prisma.user.create({
         data: {
-          email: "default@example.com",
-          name: "Utilisateur par défaut",
-          password: "password123", // À remplacer par un mot de passe hashé en production
+          email: 'default@example.com',
+          name: 'Utilisateur par défaut',
+          password: 'password123', // À remplacer par un mot de passe hashé en production
         },
       });
-      console.log("Utilisateur par défaut créé:", defaultUser.id);
+      console.log('Utilisateur par défaut créé:', defaultUser.id);
     }
 
     // Importer les balances
@@ -39,7 +39,7 @@ async function main() {
           userId: defaultUser?.id,
         },
       });
-      console.log("Balance imported successfully");
+      console.log('Balance imported successfully');
     }
 
     // Importer les transactions
@@ -105,7 +105,7 @@ async function main() {
       console.log(`${jsonData.users.length} utilisateur(s) importé(s)`);
     }
 
-    console.log("Toutes les données ont été importées avec succès !");
+    console.log('Toutes les données ont été importées avec succès !');
   } catch (error) {
     console.error("Erreur lors de l'importation des données :", error);
     console.error(error);

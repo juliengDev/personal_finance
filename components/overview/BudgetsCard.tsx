@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import data from '../../data/data.json';
 import BudgetPieChart from '../BudgetPieChart';
 import CardHeader from '../ui/CardHeader';
-import CardMini from '../ui/CardMini';
+import CardMiniOverView from '../ui/CardMiniOverView';
 
 const MAX_DISPLAY = 4;
 const { budgets: allBudgets } = data;
@@ -24,7 +24,7 @@ function BudgetsCard() {
         <div className="col-span-full mx-auto grid w-full max-w-[340px] grid-cols-2 gap-4">
           {displayedBudget &&
             displayedBudget.map((budget) => (
-              <CardMini
+              <CardMiniOverView
                 key={budget.id}
                 title={budget.category}
                 amount={budget.maximum}

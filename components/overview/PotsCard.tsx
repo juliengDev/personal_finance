@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import CardHeader from '../ui/CardHeader';
-import CardMini from '../ui/CardMini';
+import CardMini from '../ui/CardMiniOverView';
 import data from '../../data/data.json';
 
 const MAX_DISPLAY = 4;
