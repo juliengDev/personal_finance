@@ -8,7 +8,7 @@ A full-stack Personal Finance application built with Next.js 15 (App Router), Ty
 
 ## 🔗 Live Demo
 
-[https://your-app-domain.com](https://personal-finance-xi-umber.vercel.app/)
+[https://personal-finance-xi-umber.vercel.app/](https://personal-finance-xi-umber.vercel.app/)
 
 Test user already filled to try all functionnalities:
 mail: johndoe@finance.org
