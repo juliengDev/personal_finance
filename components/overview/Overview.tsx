@@ -1,10 +1,12 @@
+import { Budget, Pot, Transaction } from '@prisma/client';
+import { UserBalance } from '@/actions/balance';
+
 import BudgetsCard from '@/components/overview/BudgetsCard';
 import OverviewCards from '@/components/overview/OverviewCards';
 import PotsCard from '@/components/overview/PotsCard';
 import RecurringBills from '@/components/overview/RecurringBills';
 import TransactionsCard from '@/components/overview/TransactionsCard';
 import Title from '@/components/ui/Title';
-import { Balance, Budget, Pot, Transaction } from '@prisma/client';
 
 function Overview({
   budgets,
@@ -14,7 +16,7 @@ function Overview({
 }: {
   budgets: Budget[];
   transactions: Transaction[];
-  balance: Balance[];
+  balance: UserBalance;
   pots: Pot[];
 }) {
   return (

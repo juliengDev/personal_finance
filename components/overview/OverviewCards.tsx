@@ -1,6 +1,7 @@
+import { UserBalance } from '@/actions/balance';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { formatAmount } from '@/lib/utils';
-import { Balance } from '@prisma/client';
 
 export type CardProps = {
   title: string;
@@ -11,22 +12,18 @@ export type TitleProps = {
   name: string;
 };
 
-function OverviewCards({ balance }: { balance: Balance[] }) {
+function OverviewCards({ balance }: { balance: UserBalance }) {
   return (
     <div className="col-span-full flex w-full flex-col justify-between gap-6 md:flex-row">
       <SummaryCard
         title="Current"
-        amount={balance[0]?.current || 0}
+        amount={balance.current}
         isFirstCard={true}
       />
-      <SummaryCard
-        title="Income"
-        amount={balance[0]?.income || 0}
-        isFirstCard={false}
-      />
+      <SummaryCard title="Income" amount={balance.income} isFirstCard={false} />
       <SummaryCard
         title="Expenses"
-        amount={balance[0]?.expenses || 0}
+        amount={balance.expenses}
         isFirstCard={false}
       />
     </div>

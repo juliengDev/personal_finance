@@ -40,7 +40,7 @@ function SelectInputMobile({
           side="bottom"
           align="end"
           sideOffset={30}
-          className="w-fit border-none px-5 md:hidden"
+          className="max-h-64 w-fit overflow-y-auto border-none px-5 md:hidden"
         >
           <ul role="listbox" className="flex flex-col">
             {/* This is the label element that is always visible */}
