@@ -41,7 +41,7 @@ function LogoutButton({ isVisible }: { isVisible?: boolean }) {
       </Button>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-[35rem] rounded-2xl border-none bg-white p-8 shadow-xl">
+        <DialogContent className="w-[calc(100%-2rem)] max-w-[35rem] rounded-2xl border-none bg-white p-8 shadow-xl sm:w-auto">
           <DialogHeader>
             <DialogTitle
               style={{
