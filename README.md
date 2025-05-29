@@ -132,8 +132,8 @@ Get started with these simple steps:
 1. **Clone the repository**
 
    ```bash
-   git clone [your-repo-url]
-   cd personal-finance-app
+   git clone https://github.com/juliengDev/personal_finance
+   cd personal_finance
    ```
 
 2. **Install dependencies**
